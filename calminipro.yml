@@ -1,6 +1,6 @@
 ---
 - name: Pull docker image from dockerhub
-  hosts: all
+  hosts: utkarsh
   tasks:
     -name: Pull docker image
     docker_image:
