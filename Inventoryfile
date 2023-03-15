@@ -1,3 +1,0 @@
-[utkarsh]
-client1 ansible_host = 172.16.141.157 ansible_connection=ssh ansible_user=user1
-client2 ansible_host = 172.16.141.157 ansible_connection=ssh ansible_user=user2

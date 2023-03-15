@@ -2,7 +2,7 @@
 - name: Pull docker image from dockerhub
   hosts: utkarsh
   tasks:
-    -name: Pull docker image
-    docker_image:
-      name: utkarsh67/dockerimage_calminipro
-      source: pull
+    - name: Pull docker image
+      docker_image:
+        name: utkarsh67/dockerimage_calminipro
+        source: pull
