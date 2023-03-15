@@ -21,7 +21,7 @@ public class Calculator {
                 case 1:
                     System.out.print("Enter a number : ");
                     num1 = scanner.nextLong();
-                    System.out.println("Factorial of "+num1+" is : " + calculator.factoral(num1));
+                    System.out.println("Factorial of "+num1+" is : " + calculator.factorial(num1));
                     System.out.println("\n");
                     // Factorial Function
                     break;
@@ -33,14 +33,14 @@ public class Calculator {
         } while (true);
     }
 
-    public long factoral(long num1) {
+    public long factorial(long num1) {
         long ans = fact(num1);
         return ans;
     }
 
     public long fact(long num) {
         long k = 1;
-        for(int i = 1;i<= num;i++) {
+        for(int i = 1;i<=num;i++) {
             k *= i;
         }
 
