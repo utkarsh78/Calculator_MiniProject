@@ -1,8 +1,13 @@
 ---
 - name: Pull docker image from dockerhub
-  hosts: utkarsh
+  hosts: all
   tasks:
+    - name: sudo Start docker service
+      service:
+        name: docker
+        state: started
     - name: Pull docker image
-      docker_image:
-        name: utkarsh67/dockerimage_calminipro
-        source: pull
+      shell: docker pull utkarsh67/dockerimage_calminipro
+
+    - name: running container
+      shell: docker run -it -d utkarsh67/dockerimage_calminipro:latest /bin/bash
