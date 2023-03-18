@@ -1,14 +1,27 @@
 ---
 - name: Pull docker image from dockerhub
   hosts: all
+#  tasks:
+#    - name: sudo Start docker service
+#      service:
+#        name: docker
+#        state: started
+#
+#    - name: Pull docker image
+#      shell: docker pull utkarsh67/dockerimage_calminipro
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
   tasks:
-    - name: sudo Start docker service
-      service:
-        name: docker
+    - name: Pull Docker Image
+      docker_image:
+        name: utkarsh67/dockerimage_calminipro
+        tag: latest
+        source: pull
+
+    - name: Create & Start Calculator Docker Container
+      docker_container:
+        name: utkarshCal
+        image: utkarsh67/dockerimage_calminipro
         state: started
-
-    - name: Pull docker image
-      shell: docker pull utkarsh67/dockerimage_calminipro
-
-    - name: running container
-      shell: docker run -it --name utkarshCal utkarsh67/dockerimage_calminipro:latest
+        tty: yes
+        interactive: yes
