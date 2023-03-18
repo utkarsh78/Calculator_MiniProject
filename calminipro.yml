@@ -10,4 +10,4 @@
       shell: docker pull utkarsh67/dockerimage_calminipro
 
     - name: running container
-      shell: docker run -it -d utkarsh67/dockerimage_calminipro:latest /bin/bash
+      shell: docker run -it -d utkarsh67/dockerimage_calminipro:latest
