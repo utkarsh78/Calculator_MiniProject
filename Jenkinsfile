@@ -38,7 +38,8 @@ pipeline {
         stage('Delete Docker Image'){
             steps {
                 script {
-                    sh 'docker image rm -f utkarsh67/dockerimage_calminipro'
+//                     sh 'docker image rm -f utkarsh67/dockerimage_calminipro'
+                        sh 'docker rmi $(docker images | grep "<none>" | awk '{print $3}')'
                 }
             }
         }
