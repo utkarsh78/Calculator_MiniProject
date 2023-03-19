@@ -12,8 +12,10 @@ public class Calculator {
         double num, num2;
         do {
             System.out.println("Scientific Calculator with DevOps, Select any one operation");
-            System.out.print("Press 1 to Find Square Root\nPress 2 to find Factorial\nPress 3 to Find Natural Logarithm\nPress 4 to Find Power\n" +
-                    "Press 5 to Exit\nEnter your choice: ");
+            System.out.print("Press 1 to Find Square Root\nPress 2 to Find Factorial\nPress 3 to Find Natural Logarithm\nPress 4 to Find Power\n" +
+                    "Press 5 to Exit\n");
+            System.out.println("\n");
+            System.out.println("Enter your choice: ");
             int choice;
             try {
                 choice = scanner.nextInt();
