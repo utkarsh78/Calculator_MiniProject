@@ -39,7 +39,26 @@ pipeline {
             steps {
                 script {
 //                     sh 'docker image rm -f utkarsh67/dockerimage_calminipro'
-                        sh 'docker rmi $(docker images | grep "<none>" | awk '{print $3}')'
+                    sh '''
+                    # Get the IDs of all images with the tag <none>
+                    NONE_IMAGES=$(docker images | grep "<none>" | awk '{print $3}')
+                    # Delete all of the <none> images
+                    for IMAGE in $NONE_IMAGES
+                    do
+                      docker rmi --force $IMAGE
+                    done
+                    # Delete all of the containers associated with the <none> images
+                    for IMAGE in $NONE_IMAGES
+                    do
+                      # Get the container IDs for the image
+                      CONTAINER_IDS=$(docker ps -a | grep $IMAGE | awk '{print $1}')
+                  # Remove the containers
+                  for CONTAINER_ID in $CONTAINER_IDS
+                  do
+                    docker rm --force $CONTAINER_ID
+                  done
+                done
+                '''
                 }
             }
         }
