@@ -10,6 +10,8 @@ public class Calculator {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
         double num, num2;
+        System.out.println("Press Enter Key\n");
+        scanner.nextLine();
         do {
             System.out.println("Scientific Calculator with DevOps, Select any one operation");
             System.out.print("Press 1 to Find Square Root\nPress 2 to Find Factorial\nPress 3 to Find Natural Logarithm\nPress 4 to Find Power\n" +
