@@ -13,7 +13,7 @@ public class Calculator {
         do {
             System.out.println("Scientific Calculator with DevOps, Select any one operation");
             System.out.print("Press 1 to Find Square Root\nPress 2 to Find Factorial\nPress 3 to Find Natural Logarithm\nPress 4 to Find Power\n" +
-                    "Press 5 to Exit\nEnter your choice: ");
+                    "Press 5 to Exit\nEnter your choice : ");
             int choice;
             try {
                 choice = scanner.nextInt();
