@@ -10,8 +10,6 @@ public class Calculator {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
         double num, num2;
-        System.out.println("Press Enter Key\n");
-        scanner.nextLine();
         do {
             System.out.println("Scientific Calculator with DevOps, Select any one operation");
             System.out.print("Press 1 to Find Square Root\nPress 2 to Find Factorial\nPress 3 to Find Natural Logarithm\nPress 4 to Find Power\n" +
@@ -25,7 +23,7 @@ public class Calculator {
 
             switch (choice) {
                 case 1:
-                    System.out.print("Square Root Function ");
+                    System.out.print("Square Root Function \n");
                     System.out.print("Enter a number : ");
                     num = scanner.nextDouble();
                     System.out.println("Squareroot of "+num+" is : " + calculator.sqroot(num));
@@ -34,7 +32,7 @@ public class Calculator {
                     break;
 
                 case 2:
-                    System.out.print("Factorial Function ");
+                    System.out.print("Factorial Function \n");
                     System.out.print("Enter a number : ");
                     num = scanner.nextDouble();
                     System.out.println("Factorial of "+num+" is : " + calculator.factorial(num));
@@ -43,7 +41,7 @@ public class Calculator {
                     break;
 
                 case 3:
-                    System.out.print("Natural Logarithm Function ");
+                    System.out.print("Natural Logarithm Function \n");
                     System.out.print("Enter a number : ");
                     num = scanner.nextDouble();
                     System.out.println("Natural Logarithm of "+num+" is : " + calculator.logarithm(num));
@@ -52,7 +50,7 @@ public class Calculator {
                     break;
 
                 case 4:
-                    System.out.print("Power Function ");
+                    System.out.print("Power Function \n");
                     System.out.print("Enter Base number : ");
                     num = scanner.nextDouble();
                     System.out.print("Enter to the Power number : ");

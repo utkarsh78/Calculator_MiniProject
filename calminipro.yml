@@ -1,14 +1,6 @@
 ---
 - name: Pull docker image from dockerhub
   hosts: all
-#  tasks:
-#    - name: sudo Start docker service
-#      service:
-#        name: docker
-#        state: started
-#
-#    - name: Pull docker image
-#      shell: docker pull utkarsh67/dockerimage_calminipro
   vars:
     ansible_python_interpreter: /usr/bin/python3
   tasks:
