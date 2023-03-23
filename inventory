@@ -1,3 +1,2 @@
 [utkarsh]
-172.16.141.157 ansible_user=dell
-yuvraj ansible_host=192.168.174.151 ansible_connection=ssh ansible_user=ansible_usr ansible_ssh_pass=password
+client1 ansible_host=192.168.174.1 ansible_connection=ssh ansible_user=user1
