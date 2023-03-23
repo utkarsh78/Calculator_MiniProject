@@ -9,6 +9,8 @@ public class Calculator {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Press Enter key : ");
+        String str= scanner.nextLine();
         double num, num2;
         do {
             System.out.println("Scientific Calculator with DevOps, Select any one operation");
