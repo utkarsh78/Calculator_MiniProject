@@ -24,10 +24,16 @@ public class Calculator {
             switch (choice) {
                 case 1:
                     System.out.print("Square Root Function \n");
-                    System.out.print("Enter a number : ");
+                    System.out.print("Enter a Positive Number : ");
                     num = scanner.nextDouble();
-                    System.out.println("Squareroot of "+num+" is : " + calculator.sqroot(num));
-                    System.out.println("\n");
+                    if(num>0) {
+                        System.out.println("Squareroot of " + num + " is : " + calculator.sqroot(num));
+                        System.out.println("\n");
+                    }
+                    else{
+                        System.out.print("Enter a number greater than zero: \n");
+                        System.out.println("\n");
+                    }
                     // Square Root Function
                     break;
 
@@ -35,8 +41,14 @@ public class Calculator {
                     System.out.print("Factorial Function \n");
                     System.out.print("Enter a number : ");
                     num = scanner.nextDouble();
-                    System.out.println("Factorial of "+num+" is : " + calculator.factorial(num));
-                    System.out.println("\n");
+                    if(num>0 && num<21) {
+                        System.out.println("Factorial of " + num + " is : " + calculator.factorial(num));
+                        System.out.println("\n");
+                    }
+                    else{
+                        System.out.print("For number > 20 it Overflow for Double): \n");
+                        System.out.println("\n");
+                    }
                     // Factorial Function
                     break;
 
@@ -44,8 +56,14 @@ public class Calculator {
                     System.out.print("Natural Logarithm Function \n");
                     System.out.print("Enter a number : ");
                     num = scanner.nextDouble();
-                    System.out.println("Natural Logarithm of "+num+" is : " + calculator.logarithm(num));
-                    System.out.println("\n");
+                    if(num>0) {
+                        System.out.println("Natural Logarithm of " + num + " is : " + calculator.logarithm(num));
+                        System.out.println("\n");
+                    }
+                    else{
+                        System.out.print("Natural log is not defined for Negative Numbers: \n");
+                        System.out.println("\n");
+                    }
                     // Natural Logarithm (base е) - ln(x)
                     break;
 
