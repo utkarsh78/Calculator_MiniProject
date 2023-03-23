@@ -67,7 +67,7 @@ pipeline {
         stage('Pull Docker Image to Ansible User'){
             steps {
                 //ansiblePlaybook becomeUser: null, colorized: true, disableHostKeyChecking: true, inventory: 'inventory', playbook: 'calminipro.yml'
-                ansiblePlaybook ansible_ssh_extra_args='-o StrictHostKeyChecking=no' credentialsId: 'InventoryID', inventory: 'inventory', playbook: 'calminipro.yml'
+                ansiblePlaybook disableHostKeyChecking: true, credentialsId: 'InventoryID', inventory: 'inventory', playbook: 'calminipro.yml'
                 
             }
         }
