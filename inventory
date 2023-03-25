@@ -1,2 +1,2 @@
 [utkarsh]
-172.16.141.157 ansible_user=dell
+client1 ansible_host=172.16.141.157 ansible_connection=ssh ansible_user=user1
