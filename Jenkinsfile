@@ -5,7 +5,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Git') {
+        stage('Clone Git ') {
             steps {
                 git 'https://github.com/utkarsh78/Calculator_MiniProject.git'
             }
